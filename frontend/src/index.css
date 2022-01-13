@@ -1,0 +1,320 @@
+
+/* --primary-color: #9fa0d8 */
+/* --primary-color: #6e70c5 */
+/* --primary-color: #505492 */
+/* --primary-color: #1e2b58 */
+
+  /* --primary-color-1: #d1d1e5;
+  --primary-color-2: #c1c1dc;
+  --primary-color-3: #b0b0d3;
+  --primary-color-4: #a0a0c9;
+  --primary-color-5: #9090c0;
+  --primary-color-6: #8080b7;
+  --primary-color-7: #6f6fae;
+  --primary-color-8: #5e5ea5;
+  --primary-color-9: #545496; */
+
+/* --secondary-color: #ffd37e */
+/* --secondary-color: #eeb549 */
+
+/* --grey-color-1: #dee2e6 */
+/* --grey-color-2: #ced4da */
+/* --grey-color-3: #adb5bd */
+/* --grey-color-4: #868e96 */
+
+/* --text-color: #343a40 */
+/* --text-color: #212529 */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  outline: none;
+  text-decoration: none;
+  font-family: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: 'Roboto', sans-serif;
+
+  --primary-color-1: #b2d8d8;
+  --primary-color-2: #66b2b2;
+  --primary-color-3: #008080;
+  --primary-color-4: #006666;
+  --primary-color-5: #004c4c;
+
+  --secondary-color-1: #fbc068;
+  --secondary-color-2: #faab36;
+  --secondary-color-3: #f79606;
+
+  --grey-color-1: #eee;
+  --grey-color-2: #ccc;
+  --grey-color-3: #aaa;
+  --grey-color-4: #888;
+}
+
+button,
+a {
+  cursor: pointer;
+  color: inherit;
+}
+
+header {
+  /* border: 1px solid red; */
+  background-color: var(--grey-color-2);
+  width: 100vw;
+  height: 70px;
+
+  padding: 0 25px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .hamburger-logo-box {
+  /* border: 1px solid purple; */
+  background-color: var(--primary-color-4);
+  border-radius: 50px;
+  width: 55px;
+  min-width: 55px;
+  height: 55px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  cursor: pointer;
+}
+
+header .hamburger-logo-box svg {
+  /* border: 1px solid red; */
+  border-radius: 100%;
+  color: var(--grey-color-1);
+  height: 40px;
+}
+
+header .hamburger-logo-box svg:hover {
+  color: var(--secondary-color-2);
+}
+
+header h2 {
+  margin: 20px;
+  text-align: center;
+}
+
+header .theme-changer {
+  background-color: var(--grey-color-4);
+  position: relative;
+  /* border: 1px solid red; */
+  border-radius: 50px;
+  width: 60px;
+  min-width: 60px;
+  height: 36px;
+}
+
+header .theme-changer-btn {
+  /* border: 1px solid purple; */
+  background-color: var(--primary-color-4);
+  border-radius: 100%;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  
+  width: 30px;
+  height: 30px;
+
+  transition: transform .5s ease;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.theme-day {
+  transform: translate(-90%, -50%);
+}
+
+.theme-night {
+  transform: translate(-10%, -50%);
+}
+
+.moon-icon {
+  width: 75%;
+  fill: var(--grey-color-1);
+}
+
+.sun-icon {
+  width: 75%;
+  fill: var(--secondary-color-2);
+}
+
+.root {
+  display: flex;
+}
+
+nav {
+  background-color: var(--grey-color-2);
+  /* border: 1px solid red; */
+
+  height: 100%;
+
+  transition: width .5s ease;
+}
+
+.nav-big {
+  width: 200px;
+}
+
+.nav-small {
+  width: 70px;
+}
+
+nav ul {
+  list-style-type: none;
+}
+
+nav li a {
+  /* border: 1px solid gold; */
+  border-bottom: 1px dashed var(--grey-color-4);
+  display: flex;
+  align-items: center;
+}
+
+.menu-icon-box {
+  /* border: 1px solid purple; */
+  min-width: 70px;
+  height: 60px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;  
+
+  z-index: 1;
+}
+
+.menu-icon-bg {
+  /* border: 1px solid red; */
+  border-radius: 100%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;  
+
+  cursor: pointer;
+}
+
+.menu-icon-bg:hover {
+  background-color: var(--secondary-color-2);
+}
+
+.menu-icon {
+  /* border: 1px solid red; */
+  /* border-radius: 50px; */
+  fill: var(--primary-color-4);
+  height: 26px;
+}
+
+.menu-text-box {
+  /* border: 1px solid red; */
+  border-top-right-radius: 25px;
+  border-bottom-right-radius: 25px;
+  position: relative;
+  left: -70px;
+  width: 175px;
+  padding: 0 60px;
+}
+
+
+.menu-text-box:hover {
+  /* border: 1px solid red; */
+  background-color: var(--secondary-color-2);
+  /* width: 100px; */
+  cursor: pointer;
+}
+
+nav li p {
+  /* border: 1px solid greenyellow; */
+  padding: 5px 10px;
+  letter-spacing: 1px;
+}
+
+main {
+  /* border: 1px solid purple; */
+  background-color: var(--primary-color-3);
+  height: calc(100vh - 70px);
+  flex: 1;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+footer {
+  /* border: 1px solid red; */
+  background-color: var(--grey-color-3);
+
+  position: fixed;
+  bottom: 0;
+  height: 70px;
+  width: 100%;
+}
+
+
+.container-registration {
+  /* border: 1px solid purple; */
+  background-color: var(--grey-color-1);
+  border-radius: 5px;
+  max-width: 500px; 
+  margin: 75px;
+  padding: 25px;
+  flex: 1;
+}
+
+.container-registration h2 {
+  margin-bottom: 25px;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.container-registration form {
+  border: 1px dashed var(--grey-color-4);
+  border-radius: 5px;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+}
+
+input {
+  border: none;
+  padding: 10px 15px;
+  width: 200px;
+}
+
+input:hover {
+  background-color: var(--grey-color-2);
+}
+
+.btn {
+  border: none;
+  background-color: var(--secondary-color-2);
+  padding: 10px 15px;
+  width: 200px;
+
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: var(--secondary-color-3);
+}
