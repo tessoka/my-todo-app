@@ -1,5 +1,7 @@
 # my-todo-app
 
+*** Under Development ***
+
 This is the most recent full-stack project of a todo app which was written in React.
 
 Focusing on:

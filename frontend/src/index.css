@@ -41,6 +41,8 @@ html {
 body {
   font-size: 1.6rem;
   font-family: 'Roboto', sans-serif;
+  
+  overflow: hidden;
 
   --primary-color-1: #b2d8d8;
   --primary-color-2: #66b2b2;
@@ -56,6 +58,17 @@ body {
   --grey-color-2: #ccc;
   --grey-color-3: #aaa;
   --grey-color-4: #888;
+
+  --transition-delay: 1s;
+}
+
+.dark {
+  --primary-color-3: #004c4c;
+  --secondary-color-2: #f79606;
+  --grey-color-1: #aaa;
+  --grey-color-2: #888;
+  --grey-color-3: #555;
+  --grey-color-4: #333;
 }
 
 button,
@@ -70,16 +83,25 @@ header {
   width: 100vw;
   height: 70px;
 
-  padding: 0 25px;
-
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  transition: var(--transition-delay)
 }
 
-header .hamburger-logo-box {
+header .hamburger-logo-box,
+header .theme-changer-box {
+  width: 70px;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header .hamburger-logo-bg {
   /* border: 1px solid purple; */
-  background-color: var(--primary-color-4);
+  background-color: var(--primary-color-3);
   border-radius: 50px;
   width: 55px;
   min-width: 55px;
@@ -90,16 +112,17 @@ header .hamburger-logo-box {
   align-items: center;
 
   cursor: pointer;
+  transition: var(--transition-delay)
 }
 
-header .hamburger-logo-box svg {
+header .hamburger-logo-bg svg {
   /* border: 1px solid red; */
   border-radius: 100%;
   color: var(--grey-color-1);
   height: 40px;
 }
 
-header .hamburger-logo-box svg:hover {
+header .hamburger-logo-bg svg:hover {
   color: var(--secondary-color-2);
 }
 
@@ -112,6 +135,7 @@ header .theme-changer {
   background-color: var(--grey-color-4);
   position: relative;
   /* border: 1px solid red; */
+  box-shadow: inset -5px 8px 10px -5px rgba(0,0,0,0.5);
   border-radius: 50px;
   width: 60px;
   min-width: 60px;
@@ -120,7 +144,7 @@ header .theme-changer {
 
 header .theme-changer-btn {
   /* border: 1px solid purple; */
-  background-color: var(--primary-color-4);
+  background-color: var(--primary-color-3);
   border-radius: 100%;
 
   position: absolute;
@@ -131,6 +155,7 @@ header .theme-changer-btn {
   height: 30px;
 
   transition: transform .5s ease;
+  /* transition: var(--transition-delay); */
 
   display: flex;
   justify-content: center;
@@ -161,11 +186,17 @@ header .theme-changer-btn {
 
 nav {
   background-color: var(--grey-color-2);
-  /* border: 1px solid red; */
+  /* border: 1px solid purple; */
 
+  overflow: hidden;
   height: 100%;
 
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
   transition: width .5s ease;
+  transition: var(--transition-delay)
 }
 
 .nav-big {
@@ -218,8 +249,10 @@ nav li a {
 .menu-icon {
   /* border: 1px solid red; */
   /* border-radius: 50px; */
-  fill: var(--primary-color-4);
+  fill: var(--primary-color-3);
   height: 26px;
+
+  transition: var(--transition-delay)
 }
 
 .menu-text-box {
@@ -255,21 +288,37 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
+
+  transition: var(--transition-delay)
 }
 
 
 footer {
   /* border: 1px solid red; */
-  background-color: var(--grey-color-3);
-
-  position: fixed;
-  bottom: 0;
+  position: relative;
+  width: 200px;
   height: 70px;
-  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  transition: all .4s ease-in-out;
+}
+
+.copy-box p {
+  text-align: center;
+  letter-spacing: 1px;
+  font-size: 12px;
+}
+
+.rotated {
+  transform: rotate(-90deg);
+  transform-origin: top left;
+  /* left: 35px; */
 }
 
 
-.container-registration {
+.container {
   /* border: 1px solid purple; */
   background-color: var(--grey-color-1);
   border-radius: 5px;
@@ -277,9 +326,11 @@ footer {
   margin: 75px;
   padding: 25px;
   flex: 1;
+
+  transition: var(--transition-delay)
 }
 
-.container-registration h2 {
+.container h2 {
   margin-bottom: 25px;
   text-align: center;
   text-transform: uppercase;
@@ -306,15 +357,31 @@ input:hover {
   background-color: var(--grey-color-2);
 }
 
+.input-err {
+  background-color: #e74c3c;
+}
+
 .btn {
   border: none;
+  display: block;
   background-color: var(--secondary-color-2);
   padding: 10px 15px;
   width: 200px;
+  margin: 0 auto;
+
+  text-transform: uppercase;
+  letter-spacing: 1px;
 
   cursor: pointer;
 }
 
 .btn:hover {
   background-color: var(--secondary-color-3);
+}
+
+
+.home-btn-box {
+  /* border: 1px solid red; */
+  display: flex;
+  justify-content: space-between;
 }

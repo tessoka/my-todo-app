@@ -1,11 +1,18 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import { ThemeContext } from "../utility/Context"
 import { Link } from 'react-router-dom'
 import DashboardLogo from '../svg/dash-d-text'
 import ProfileLogo from '../svg/person-d-text'
 import StatisticLogo from '../svg/stats-d-text'
-import LogoutLogo from '../svg/exit-d-text'
+import LogoutLogo from '../svg/logout-d-text'
+// import FacebookLogo from '../svg/logo-facebook.svg'
+// import InstagramLogo from '../svg/logo-instagram.svg'
+// import LinkedInLogo from '../svg/logo-linkedin.svg'
+
 
 const Navbar = ({showNav}) => {
+
+  const { themeColor } = useContext(ThemeContext)
 
   return (
     <nav className={showNav ? "nav-big" : "nav-small"}>
@@ -59,6 +66,16 @@ const Navbar = ({showNav}) => {
           </Link>
         </li>
       </ul>
+
+      {themeColor}
+
+      <footer className={!showNav && "rotated"}>
+        <div className="copy-box">
+          <p>
+            Powered by Tessoka &copy; 2022
+          </p>
+        </div>
+      </footer>
     </nav>
   )
 }
