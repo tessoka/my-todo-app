@@ -2,24 +2,25 @@
 
 *** Under Development ***
 
-This is the most recent full-stack project of a todo app which was written in React.
+This is the most recent full-stack project of a todo app which was written in React.js, Node.js and with MongoDB.
 
-Focusing on:
+Basics:
 - Frontend: React.js
 - Backend: Node.js
 - Database: MongoDB
 
-- CSS precision
+Frontend features:
+- Pixel precision
 - State handling
-- State storing with Context & Redux
+- State storing with Context
+- SASS utilization (pending)
+- Custom spinner
 
-- Database connection
-
-
-Features:
-- Registration
-- Login & authentication
+Backend features:
+- Registration & Login with Joi validation
+- JSON Web Token authenticaiton
 - Session handling
+- MongoDB database connection
 
 
 Url: https://tessoka.github.io/my-todo-app/
