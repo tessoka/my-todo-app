@@ -1,8 +1,6 @@
 import { useState, useEffect } from 'react'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
-import Header from './components/Header'
 import Navbar from './components/Navbar'
-// import Footer from './components/Footer'
 import Home from './components/Home'
 import Dashboard from './components/Dashboard'
 import Registration from './components/Registration'
@@ -45,9 +43,6 @@ function App() {
     <ThemeContext.Provider value={{ themeColor, setThemeColor }}>
       <Router>
         <div className={themeColor === "dark" ? "App dark" : "App"}>
-          <header>
-            <Header setShowNav={setShowNav} showNav={showNav} />
-          </header>
           <div className="root">
             <aside>
               <Navbar showNav={showNav} />
@@ -64,9 +59,6 @@ function App() {
               </Routes>
             </main>
           </div>
-          {/* <footer>
-            <Footer />
-          </footer> */}
         </div>
       </Router>
     </ThemeContext.Provider>

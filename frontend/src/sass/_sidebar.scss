@@ -1,0 +1,175 @@
+nav {
+  // border: 1px solid red;
+  // background-color: $primaryColor-6;
+  background-image: linear-gradient($primaryColor-6 30%, $primaryColor-4);
+  width: 250px;
+  height: 100vh;
+  
+  color: $primaryColor-1;
+  letter-spacing: 1px;
+  fill: $primaryColor-1;
+  
+  display: flex;
+  flex-direction: column;
+
+    .icon {
+      // background-color: red;
+      fill: inherit;
+      height: 30px;
+    }
+    
+    .icon-planet {
+      // background-color: red;
+      height: 45px;
+    }
+  
+    > div {
+      // border: 1px solid green;
+      height: 100px;
+      @include flexCenter();
+      justify-content: space-between;
+      padding: 0 10px;
+    }
+
+    .logo-box {
+      // border: 1px solid red;
+      width: 170px;
+      height: 75px;
+      @include flexCenter();
+      gap: 15px;
+      
+      p {
+        font-size: 20px;
+      }
+    }
+    
+    .hamburger-box {
+      // border: 1px solid yellow;
+      border-radius: 13px;
+      width: 50px;
+      height: 50px;
+      @include flexCenter();
+      transition: all .3s ease-in-out;
+
+      &:hover {
+        background-color: $primaryColor-1;
+        color: $primaryColor-6;
+        cursor: pointer;
+      }
+    }
+
+    ul {
+      flex: 1;
+      padding: 0 10px;
+    }
+
+    li {
+      // border: 1px solid rebeccapurple;
+      border-radius: 13px;
+      // width: 215px;
+      height: 50px;
+      margin: 15px auto;
+      fill: $primaryColor-1;
+      @include flexCenter();
+      gap: 10px;
+      justify-content: flex-start;
+      transition: all .3s ease-in-out;
+
+      &:hover {
+        background-color: $primaryColor-1;
+        // font-weight: 500;
+        color: $primaryColor-6;
+        fill: $primaryColor-6;
+        cursor: pointer;
+      }
+
+      .icon-box {
+        // border: 1px solid red;
+        border-radius: 13px;
+        height: 50px;
+        width: 50px;
+        @include flexCenter();
+
+        svg {
+          height: 20px;
+        }
+      }
+    }
+
+    .navbar-bot {
+      height: 85px;
+      @include flexCenter();
+      justify-content: space-between;
+      gap: 10px;
+
+      .user-box {
+        // border: 1px solid greenyellow;
+        border-radius: 13px;
+        flex: 1;
+        height: 60px;
+        @include flexCenter();
+        gap: 5px;
+
+        &:hover {
+          background-color: $primaryColor-1;
+          color: $primaryColor-6;
+          cursor: pointer;
+        }
+
+        .profile-pic {
+          background-color: $primaryColor-5;
+          // border: 1px dashed $primaryColor-1;
+          border-radius: 13px;
+          height: 50px;
+          width: 50px;
+          margin-left: 5px;
+        }
+
+        .profile-details {
+          // border: 1px solid goldenrod;
+          height: 75px;
+          flex: 1;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          gap: 5px;
+
+          p {
+            // border: 1px solid red;
+            height: 25px;
+            padding: 0 5px;
+            font-size: 11px;
+            letter-spacing: 0px;
+            @include flexCenter();
+            justify-content: flex-start;
+
+            &:first-child {
+              letter-spacing: 1px;
+              font-weight: 500;
+              font-size: 13px;
+            }
+          }
+
+        }
+
+      }
+
+      .log-box {
+        // border: 1px solid red;
+        border-radius: 13px;
+        width: 50px;
+        height: 50px;
+        @include flexCenter();
+        transition: all .3s ease-in-out;
+
+        &:hover {
+          background-color: $primaryColor-1;
+          color: $primaryColor-6;
+          fill: $primaryColor-6;
+          cursor: pointer;
+        }
+      }
+
+    }
+    
+}

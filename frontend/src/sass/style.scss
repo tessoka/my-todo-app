@@ -1,0 +1,32 @@
+@import "./mixins";
+@import "./variables";
+@import "./sidebar";
+
+
+// ----- RESET CSS -----
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  outline: none;
+  text-decoration: none;
+  font-family: inherit;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+// ----- END of RESET CSS -----
+
+
+// ----- FUNDAMENTALS -----
+.root {
+  @include flexCenter();
+}
+
+main {
+  border: 1px solid red;
+  height: 100vh;
+  flex: 1;
+}
+// ----- END of FUNDAMENTALS -----

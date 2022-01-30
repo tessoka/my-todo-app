@@ -1,0 +1,290 @@
+nav {
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(30%, #0f131f), to(#324e7b));
+  background-image: linear-gradient(#0f131f 30%, #324e7b);
+  width: 250px;
+  height: 100vh;
+  color: #fbfbfd;
+  letter-spacing: 1px;
+  fill: #fbfbfd;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+nav .icon {
+  fill: inherit;
+  height: 30px;
+}
+
+nav .icon-planet {
+  height: 45px;
+}
+
+nav > div {
+  height: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0 10px;
+}
+
+nav .logo-box {
+  width: 170px;
+  height: 75px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 15px;
+}
+
+nav .logo-box p {
+  font-size: 20px;
+}
+
+nav .hamburger-box {
+  border-radius: 13px;
+  width: 50px;
+  height: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+}
+
+nav .hamburger-box:hover {
+  background-color: #fbfbfd;
+  color: #0f131f;
+  cursor: pointer;
+}
+
+nav ul {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  padding: 0 10px;
+}
+
+nav li {
+  border-radius: 13px;
+  height: 50px;
+  margin: 15px auto;
+  fill: #fbfbfd;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10px;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+}
+
+nav li:hover {
+  background-color: #fbfbfd;
+  color: #0f131f;
+  fill: #0f131f;
+  cursor: pointer;
+}
+
+nav li .icon-box {
+  border-radius: 13px;
+  height: 50px;
+  width: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+nav li .icon-box svg {
+  height: 20px;
+}
+
+nav .navbar-bot {
+  height: 85px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 10px;
+}
+
+nav .navbar-bot .user-box {
+  border-radius: 13px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  height: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 5px;
+}
+
+nav .navbar-bot .user-box:hover {
+  background-color: #fbfbfd;
+  color: #0f131f;
+  cursor: pointer;
+}
+
+nav .navbar-bot .user-box .profile-pic {
+  background-color: #192136;
+  border-radius: 13px;
+  height: 50px;
+  width: 50px;
+  margin-left: 5px;
+}
+
+nav .navbar-bot .user-box .profile-details {
+  height: 75px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 5px;
+}
+
+nav .navbar-bot .user-box .profile-details p {
+  height: 25px;
+  padding: 0 5px;
+  font-size: 11px;
+  letter-spacing: 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+nav .navbar-bot .user-box .profile-details p:first-child {
+  letter-spacing: 1px;
+  font-weight: 500;
+  font-size: 13px;
+}
+
+nav .navbar-bot .log-box {
+  border-radius: 13px;
+  width: 50px;
+  height: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+}
+
+nav .navbar-bot .log-box:hover {
+  background-color: #fbfbfd;
+  color: #0f131f;
+  fill: #0f131f;
+  cursor: pointer;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  outline: none;
+  text-decoration: none;
+  font-family: inherit;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.root {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main {
+  border: 1px solid red;
+  height: 100vh;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+/*# sourceMappingURL=style.css.map */
