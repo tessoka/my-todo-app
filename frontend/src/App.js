@@ -4,7 +4,10 @@ import Navbar from './components/Navbar'
 import Home from './components/Home'
 import Dashboard from './components/Dashboard'
 import Registration from './components/Registration'
-import Login from './components/Login'
+import Profile from './components/Profile'
+import Messages from './components/Messages'
+import Analytics from './components/Analytics'
+import Settings from './components/Settings'
 import axios from 'axios'
 import { backendUrl } from './utility/ServerUrl'
 import { ThemeContext } from './utility/Context'
@@ -43,22 +46,20 @@ function App() {
     <ThemeContext.Provider value={{ themeColor, setThemeColor }}>
       <Router>
         <div className={themeColor === "dark" ? "App dark" : "App"}>
-          <div className="root">
-            <aside>
-              <Navbar showNav={showNav} />
-            </aside>
-            <main>
-              <Routes>
-                <Route path="/" element={<Home />} />
-                <Route path="/registration" element={<Registration />} />
-                <Route path="/login" element={<Login />} />
-                <Route path="/dashboard" element={<Dashboard />} />
-                <Route path="/profile" element={<Dashboard />} />
-                <Route path="/statistic" element={<Dashboard />} />
-                <Route path="/logout" element={<Dashboard />} />
-              </Routes>
-            </main>
-          </div>
+          <aside>
+            <Navbar showNav={showNav} />
+          </aside>
+          <main>
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/dashboard" element={<Dashboard />} />
+              <Route path="/profile" element={<Profile />} />
+              <Route path="/messages" element={<Messages />} />
+              <Route path="/analytics" element={<Analytics />} />
+              <Route path="/settings" element={<Settings />} />
+              <Route path="/registration" element={<Registration />} />
+            </Routes>
+          </main>
         </div>
       </Router>
     </ThemeContext.Provider>

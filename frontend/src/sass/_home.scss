@@ -1,58 +1,109 @@
-.logo-container {
-  // border: 1px solid purple;
-  position: absolute;
-  top: 50px;
-  left: 50px;
-
-  @include flexCenter();
-  gap: 10px;
-
-  .the-box {
-    background-color: $primaryColor-5;
-    width: 50px;
-    height: 150px;
-  }
-  
-  p {
-    // border: 1px solid red;
-    letter-spacing: 1px;
-    color: $primaryColor-5;
-    line-height: 38px;
-    font-size: 32px;
-    font-weight: 900;
-    
-    &:last-child {
-      text-transform: uppercase;
-      font-size: 12px;
-    }
-  }
-}
-
 .container-home {
-  // background-color: $primaryColor-4;
-  background-image: linear-gradient(to bottom right, $primaryColor-6, $primaryColor-4 80%);
-  border-radius: 10px;
   // border: 1px solid red;
 
   width: 500px;
-  height: 400px;
-  max-width: 90%;
-  max-height: 90%;
+  height: 100%;
 
-  color: $primaryColor-1;
+  color: $primaryColor-5;
   letter-spacing: 1px;
-  text-transform: uppercase;
+  
+  .logo-container {
+    // border: 1px solid purple;
+    @include flexCenter();
+    justify-content: flex-start;
+    gap: 10px;
+    
+    .the-box {
+      background-color: $primaryColor-5;
+      width: 50px;
+      height: 150px;
+    }  
+    
+    p {
+      // border: 1px solid red;
+      letter-spacing: 1px;
+      color: $primaryColor-5;
+      line-height: 38px;
+      font-size: 32px;
+      font-weight: 900;
+      text-transform: uppercase;
+      
+      &:last-child {
+        text-transform: uppercase;
+        font-size: 12px;
+      }
+    }
+  }
 
+  .login-container {
+    // border: 1px solid steelblue;
+    margin-top: 50px;
+    
+    .login-text-box {
+      // border: 1px solid red;
+
+      h1 {
+        margin-bottom: 5px;
+      }
+    }
+
+    .the-box-small {
+      background-color: $primaryColor-5;
+      // border: 1px solid red;
+      width: 50px;
+      height: 20px;
+
+      margin: 25px 0;
+    }
+
+    form {
+      // border: 1px solid red;
+      display: flex;
+      flex-direction: column;
+
+      input {
+        background-color: $primaryColor-1;
+        border: none;
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+
+        width: 350px;
+        height: 40px;
+        padding-left: 15px;
+
+        letter-spacing: 1px;
+
+        &:first-child {
+          margin-bottom: 10px;
+        }
+      }
+
+      .login-btn-box {
+        // border: 1px solid orange;
+
+        margin-top: 50px;
+        
+        display: flex;
+        gap: 15px;
+      }
+    }
+    
+  }
+
+}
+
+
+
+
+
+
+
+
+
+.home-btn-box {
+  // border: 1px solid red;
+
+  height: 125px;
   @include flexCenter();
   flex-direction: column;
-  justify-content: space-around;
-
-  .home-btn-box {
-    // border: 1px solid red;
-
-    height: 125px;
-    @include flexCenter();
-    flex-direction: column;
-    justify-content: space-between;
-  }
+  justify-content: space-between;
 }

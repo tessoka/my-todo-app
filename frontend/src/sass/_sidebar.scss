@@ -13,6 +13,7 @@ nav {
   
   transition: width 1s ease;
 
+  z-index: 1;
   
 
 
@@ -83,6 +84,7 @@ nav {
       @include flexCenter();
 
       transition: all .5s ease-in-out;
+      z-index: 1;
 
       &:hover {
         background-color: $primaryColor-1;
@@ -97,8 +99,6 @@ nav {
           // top: 50%;
           pointer-events: none;
           visibility: visible;
-
-          z-index: 1;
         }
       }
     }

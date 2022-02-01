@@ -14,6 +14,7 @@ nav {
           flex-direction: column;
   -webkit-transition: width 1s ease;
   transition: width 1s ease;
+  z-index: 1;
 }
 
 nav .icon {
@@ -86,6 +87,7 @@ nav .navbar-top-bot-btn-box {
           align-items: center;
   -webkit-transition: all .5s ease-in-out;
   transition: all .5s ease-in-out;
+  z-index: 1;
 }
 
 nav .navbar-top-bot-btn-box:hover {
@@ -101,7 +103,6 @@ nav .navbar-top-bot-btn-box:hover span {
   opacity: 1;
   pointer-events: none;
   visibility: visible;
-  z-index: 1;
 }
 
 nav ul {
@@ -309,10 +310,14 @@ nav span {
   width: 80px;
 }
 
-.logo-container {
-  position: absolute;
-  top: 50px;
-  left: 50px;
+.container-home {
+  width: 500px;
+  height: 100%;
+  color: #192136;
+  letter-spacing: 1px;
+}
+
+.container-home .logo-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -322,57 +327,81 @@ nav span {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   gap: 10px;
 }
 
-.logo-container .the-box {
+.container-home .logo-container .the-box {
   background-color: #192136;
   width: 50px;
   height: 150px;
 }
 
-.logo-container p {
+.container-home .logo-container p {
   letter-spacing: 1px;
   color: #192136;
   line-height: 38px;
   font-size: 32px;
   font-weight: 900;
+  text-transform: uppercase;
 }
 
-.logo-container p:last-child {
+.container-home .logo-container p:last-child {
   text-transform: uppercase;
   font-size: 12px;
 }
 
-.container-home {
-  background-image: -webkit-gradient(linear, left top, right bottom, from(#0f131f), color-stop(80%, #324e7b));
-  background-image: linear-gradient(to bottom right, #0f131f, #324e7b 80%);
-  border-radius: 10px;
-  width: 500px;
-  height: 400px;
-  max-width: 90%;
-  max-height: 90%;
-  color: #fbfbfd;
-  letter-spacing: 1px;
-  text-transform: uppercase;
+.container-home .login-container {
+  margin-top: 50px;
+}
+
+.container-home .login-container .login-text-box h1 {
+  margin-bottom: 5px;
+}
+
+.container-home .login-container .the-box-small {
+  background-color: #192136;
+  width: 50px;
+  height: 20px;
+  margin: 25px 0;
+}
+
+.container-home .login-container form {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
 }
 
-.container-home .home-btn-box {
+.container-home .login-container form input {
+  background-color: #fbfbfd;
+  border: none;
+  -webkit-box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+  width: 350px;
+  height: 40px;
+  padding-left: 15px;
+  letter-spacing: 1px;
+}
+
+.container-home .login-container form input:first-child {
+  margin-bottom: 10px;
+}
+
+.container-home .login-container form .login-btn-box {
+  margin-top: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 15px;
+}
+
+.home-btn-box {
   height: 125px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -406,7 +435,13 @@ body {
   font-family: 'Montserrat', sans-serif;
 }
 
-.root {
+button,
+a {
+  color: inherit;
+  cursor: pointer;
+}
+
+.App {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -419,7 +454,6 @@ body {
 }
 
 main {
-  border: 1px solid red;
   background-color: #fbfbfd;
   position: relative;
   height: 100vh;
@@ -436,22 +470,34 @@ main {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  z-index: -1;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
 }
 
 .btn {
   background-color: #fbfbfd;
-  border: none;
-  border-radius: 10px;
+  border: 1px solid #324e7b;
   width: 150px;
-  padding: 10px 15px;
+  height: 40px;
   letter-spacing: 1px;
-  font-size: 16px;
-  cursor: pointer;
+  font-size: 12px;
+  text-transform: uppercase;
+  color: #192136;
 }
 
 .btn:hover {
-  background-color: #5068a9;
+  border: none;
+  background-color: #f41361;
+}
+
+.btn-cta {
+  background-color: #324e7b;
   color: #fbfbfd;
+}
+
+.btn-cta:hover {
+  color: #192136;
+  background-color: #f41361;
 }
 /*# sourceMappingURL=style.css.map */

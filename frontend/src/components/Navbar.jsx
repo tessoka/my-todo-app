@@ -26,48 +26,60 @@ const Navbar = () => {
         </div>
       </div>
       <ul>
-      <li>
-          <div className="icon-box">
-            <svg className="icon" viewBox="0 0 512 512"><path d={PlanetLogo} /></svg>
-          </div>
-          <p className={isNavOpen ? "" : "not-visible"}>Home</p>
-          { !isNavOpen && <span>Home</span> }
-        </li>
-        <li>
-          <div className="icon-box">
-            <svg className="icon" viewBox="0 0 512 512"><path d={DashboardLogo} /></svg>
-          </div>
-          <p className={isNavOpen ? "" : "not-visible"}>Dashboard</p>
-          { !isNavOpen && <span>Dashboard</span> }
-        </li>
-        <li>
-          <div className="icon-box">
-            <svg className="icon" viewBox="0 0 512 512"><path d={ProfileLogo} /></svg>
-          </div>
-          <p className={isNavOpen ? "" : "not-visible"}>Profile</p>
-          { !isNavOpen && <span>Profile</span> }
-        </li>
-        <li>
-          <div className="icon-box">
-            <svg className="icon" viewBox="0 0 512 512"  strokeLinejoin="round"><path d={MsgLogo} /></svg>
-          </div>
-          <p className={isNavOpen ? "" : "not-visible"}>Messages</p>
-          { !isNavOpen && <span>Messages</span> }
-        </li>
-        <li>
-          <div className="icon-box">
-            <svg className="icon" viewBox="0 0 512 512"><path d={StatisticLogo} /></svg>
-          </div>
-          <p className={isNavOpen ? "" : "not-visible"}>Analytics</p>
-          { !isNavOpen && <span>Analytics</span> }
-        </li>
-        <li>
-          <div className="icon-box">
-            <svg className="icon" viewBox="0 0 512 512"><path d={SettingsLogo} /></svg>
-          </div>
-          <p className={isNavOpen ? "" : "not-visible"}>Settings</p>
-          { !isNavOpen && <span>Settings</span> }
-        </li>
+        <Link to="/">
+          <li>
+            <div className="icon-box">
+              <svg className="icon" viewBox="0 0 512 512"><path d={PlanetLogo} /></svg>
+            </div>
+            <p className={isNavOpen ? "" : "not-visible"}>Home</p>
+            { !isNavOpen && <span>Home</span> }
+          </li>
+        </Link>
+        <Link to="/dashboard">
+          <li>
+            <div className="icon-box">
+              <svg className="icon" viewBox="0 0 512 512"><path d={DashboardLogo} /></svg>
+            </div>
+            <p className={isNavOpen ? "" : "not-visible"}>Dashboard</p>
+            { !isNavOpen && <span>Dashboard</span> }
+          </li>
+        </Link>
+        <Link to="/profile">
+          <li>
+            <div className="icon-box">
+              <svg className="icon" viewBox="0 0 512 512"><path d={ProfileLogo} /></svg>
+            </div>
+            <p className={isNavOpen ? "" : "not-visible"}>Profile</p>
+            { !isNavOpen && <span>Profile</span> }
+          </li>
+        </Link>
+        <Link to="/messages">
+          <li>
+            <div className="icon-box">
+              <svg className="icon" viewBox="0 0 512 512"  strokeLinejoin="round"><path d={MsgLogo} /></svg>
+            </div>
+            <p className={isNavOpen ? "" : "not-visible"}>Messages</p>
+            { !isNavOpen && <span>Messages</span> }
+          </li>
+        </Link>
+        <Link to="/analytics">
+          <li>
+            <div className="icon-box">
+              <svg className="icon" viewBox="0 0 512 512"><path d={StatisticLogo} /></svg>
+            </div>
+            <p className={isNavOpen ? "" : "not-visible"}>Analytics</p>
+            { !isNavOpen && <span>Analytics</span> }
+          </li>
+        </Link>
+        <Link to="/settings">
+          <li>
+            <div className="icon-box">
+              <svg className="icon" viewBox="0 0 512 512"><path d={SettingsLogo} /></svg>
+            </div>
+            <p className={isNavOpen ? "" : "not-visible"}>Settings</p>
+            { !isNavOpen && <span>Settings</span> }
+          </li>
+        </Link>
       </ul>
       <div className="navbar-bot">
         <div className={isNavOpen ? "user-box" : "user-box not-visible"}>
