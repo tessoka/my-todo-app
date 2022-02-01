@@ -1,6 +1,8 @@
 @import "./mixins";
 @import "./variables";
 @import "./sidebar";
+@import "./home";
+
 
 
 // ----- RESET CSS -----
@@ -26,7 +28,37 @@ body {
 
 main {
   border: 1px solid red;
+  background-color: $primaryColor-1;
+  
+  position: relative;
+
   height: 100vh;
+  padding: 50px;
   flex: 1;
+  @include flexCenter();
+
+  z-index: -1;
 }
 // ----- END of FUNDAMENTALS -----
+
+
+// ----- GLOBAL -----
+.btn {
+  background-color: $primaryColor-1;
+  border: none;
+  border-radius: 10px;
+
+  width: 150px;
+  padding: 10px 15px;
+
+  letter-spacing: 1px;
+  font-size: 16px;
+
+  cursor: pointer;
+
+  &:hover {
+    background-color: $primaryColor-3;
+    color: $primaryColor-1
+  }
+}
+// ----- END of GLOBAL -----

@@ -2,7 +2,6 @@ nav {
   // border: 1px solid red;
   // background-color: $primaryColor-6;
   background-image: linear-gradient($primaryColor-6 30%, $primaryColor-4);
-  width: 250px;
   height: 100vh;
   
   color: $primaryColor-1;
@@ -11,8 +10,13 @@ nav {
   
   display: flex;
   flex-direction: column;
+  
+  transition: width 1s ease;
 
-    .icon {
+  
+
+
+  .icon {
       // background-color: red;
       fill: inherit;
       height: 30px;
@@ -21,59 +25,104 @@ nav {
     .icon-planet {
       // background-color: red;
       height: 45px;
+      width: 45px;
     }
   
     > div {
       // border: 1px solid green;
+      position: relative;
       height: 100px;
-      @include flexCenter();
-      justify-content: space-between;
-      padding: 0 10px;
     }
 
     .logo-box {
       // border: 1px solid red;
+      
+      position: absolute;
+      left: 12.5px;
+      top: 50%;
+      transform: translate(0, -50%);
+
       width: 170px;
       height: 75px;
       @include flexCenter();
-      gap: 15px;
+      gap: 10px;
+
+      // cursor: pointer;
+
+      transition: visibility 1s, opacity .5s ease-out;
       
       p {
+        // border: 1px solid red;
+        position: relative;
         font-size: 20px;
+        pointer-events: none;
+        
+        .small-the {
+          position: absolute;
+          font-size: 12px;
+          top: -10px;
+          left: 5px;
+        }
       }
+
     }
     
-    .hamburger-box {
+    .navbar-top-bot-btn-box {
       // border: 1px solid yellow;
-      border-radius: 13px;
+      border-radius: $nav-border-radius;
+
+      position: absolute;
+      right: 15px;
+      top: 50%;
+      transform: translate(0, -50%);
+      
       width: 50px;
       height: 50px;
+      // margin: 0 10px;
+
       @include flexCenter();
-      transition: all .3s ease-in-out;
+
+      transition: all .5s ease-in-out;
 
       &:hover {
         background-color: $primaryColor-1;
         color: $primaryColor-6;
+        fill: $primaryColor-6;
         cursor: pointer;
+
+        span {
+          // border: 1px solid red;
+          transition: visibility 1s, opacity .5s ease-out;
+          opacity: 1;
+          // top: 50%;
+          pointer-events: none;
+          visibility: visible;
+
+          z-index: 1;
+        }
       }
     }
 
     ul {
       flex: 1;
-      padding: 0 10px;
+      padding: 0 15px;
     }
 
     li {
       // border: 1px solid rebeccapurple;
-      border-radius: 13px;
-      // width: 215px;
+      border-radius: $nav-border-radius;
+
+      position: relative;
+
       height: 50px;
       margin: 15px auto;
       fill: $primaryColor-1;
+
       @include flexCenter();
       gap: 10px;
       justify-content: flex-start;
-      transition: all .3s ease-in-out;
+
+      transition: all .5s ease-in-out;
 
       &:hover {
         background-color: $primaryColor-1;
@@ -81,34 +130,55 @@ nav {
         color: $primaryColor-6;
         fill: $primaryColor-6;
         cursor: pointer;
+
+        span {
+          transition: all .5s ease;
+          opacity: 1;
+          // top: 50%;
+          pointer-events: none;
+          visibility: visible;
+        }
       }
 
       .icon-box {
         // border: 1px solid red;
-        border-radius: 13px;
-        height: 50px;
-        width: 50px;
+        border-radius: $nav-border-radius;
+        min-height: 50px;
+        min-width: 50px;
         @include flexCenter();
 
         svg {
           height: 20px;
         }
       }
+
+      p {
+        transition: visibility .5s, opacity .2s ease-in;
+      }
     }
 
     .navbar-bot {
+      // border: 1px solid goldenrod;
       height: 85px;
       @include flexCenter();
       justify-content: space-between;
-      gap: 10px;
+      gap: 10px;     
 
       .user-box {
         // border: 1px solid greenyellow;
-        border-radius: 13px;
-        flex: 1;
-        height: 60px;
+        border-radius: $nav-border-radius;
+        
+        position: absolute;
+        left: 10px;
+        top: 50%;
+        transform: translate(0, -50%);
+
+        width: 170px;
+        height: 50px;
         @include flexCenter();
-        gap: 5px;
+        justify-content: flex-start;
+
+        transition: color .5s, background-color .5s ease-in-out, visibility .5s, opacity .5s ease-out;
 
         &:hover {
           background-color: $primaryColor-1;
@@ -119,20 +189,19 @@ nav {
         .profile-pic {
           background-color: $primaryColor-5;
           // border: 1px dashed $primaryColor-1;
-          border-radius: 13px;
+          border-radius: $nav-border-radius;
           height: 50px;
           width: 50px;
-          margin-left: 5px;
+          // margin-left: 5px;
         }
 
         .profile-details {
           // border: 1px solid goldenrod;
-          height: 75px;
-          flex: 1;
+          height: 100%;
+          // flex: 1;
           display: flex;
           flex-direction: column;
           justify-content: center;
-          gap: 5px;
 
           p {
             // border: 1px solid red;
@@ -151,25 +220,42 @@ nav {
           }
 
         }
-
       }
+    } 
 
-      .log-box {
-        // border: 1px solid red;
-        border-radius: 13px;
-        width: 50px;
-        height: 50px;
-        @include flexCenter();
-        transition: all .3s ease-in-out;
-
-        &:hover {
-          background-color: $primaryColor-1;
-          color: $primaryColor-6;
-          fill: $primaryColor-6;
-          cursor: pointer;
-        }
-      }
-
+    .not-visible {
+      visibility: hidden;
+      opacity: 0;
     }
-    
+
+    span {
+      // border: 1px solid purple;
+      background-color: $primaryColor-1;
+      border-radius: 10px;
+      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+      color: $primaryColor-6;
+  
+      position: absolute;
+      top: 50%;
+      left: 75px;
+      transform: translateY(-50%);
+  
+      height: 35px;
+      width: 120px;
+      @include flexCenter();
+  
+      transition: 0s;
+      opacity: 0;
+      visibility: hidden;
+  
+      z-index: 100;
+    }
+}
+
+.nav-big {
+  width: 250px;
+}
+
+.nav-small {
+  width: 80px;
 }
