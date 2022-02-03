@@ -48,13 +48,17 @@ li {
 // ----- FUNDAMENTALS -----
 .App {
   @include flexCenter();
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  width: 100%;
 }
 
 main {
   // border: 1px solid red;
   background-color: $primaryColor-1;
-  
-  position: relative;
 
   height: 100vh;
   padding: 50px;

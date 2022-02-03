@@ -1,13 +1,14 @@
 import React, { useContext, useState } from 'react'
-import { ThemeContext } from "../utility/Context"
+import { ThemeContext, MenuContext } from "../utility/Context"
 import { Link } from 'react-router-dom'
 import {RocketLogo, PlanetLogo, LogoutLogo, StatisticLogo, SettingsLogo, ProfileLogo, MsgLogo, MenuLogo, DashboardLogo} from '../svg/svg-d-texts'
 
-const Navbar = () => {
+const Navbar = ({isNavOpen, setIsNavOpen}) => {
 
-  const [ isNavOpen, setIsNavOpen ] = useState(true)
+  console.log(isNavOpen)
 
   const handleClickBurger = () => {
+    localStorage.setItem("isNavOpen", !isNavOpen)
     setIsNavOpen(!isNavOpen)
   }
 

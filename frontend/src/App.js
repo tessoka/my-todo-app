@@ -16,9 +16,9 @@ import { ThemeContext } from './utility/Context'
 
 function App() {
 
-  const [ showNav, setShowNav ] = useState(false)
   const [ sessionToken, setSessionToken ] = useState(localStorage.getItem("sessionToken"))
   const [ themeColor, setThemeColor ] = useState("")
+  const [ isNavOpen, setIsNavOpen ] = useState("")
 
   const identifyUser = async () => {
     try {
@@ -28,8 +28,15 @@ function App() {
       localStorage.setItem("noOfVisits", res.data.noOfVisits)
       if (res.data.noOfVisits === 1) {
         setThemeColor("light")
+        setIsNavOpen(true)
+        localStorage.setItem("isNavOpen", true)
         localStorage.setItem("themeColor", "light")
       } else {
+        if (localStorage.getItem("isNavOpen") === "true") {
+          setIsNavOpen(true)
+        } else {
+          setIsNavOpen(false)
+        }
         setThemeColor(localStorage.getItem("themeColor"))
       }
     } catch (err) {
@@ -51,7 +58,7 @@ function App() {
 
         <div className={themeColor === "dark" ? "App dark" : "App"}>
           <aside>
-            <Navbar showNav={showNav} />
+            <Navbar isNavOpen={isNavOpen} setIsNavOpen={setIsNavOpen} />
           </aside>
           <main>
             <Routes>

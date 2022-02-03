@@ -503,7 +503,7 @@ nav span {
   position: relative;
   width: 500px;
   height: 600px;
-  padding: 25px;
+  padding: 35px;
 }
 
 .modal-bg .modal-box h4 {
@@ -619,11 +619,15 @@ li {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
 }
 
 main {
   background-color: #fbfbfd;
-  position: relative;
   height: 100vh;
   padding: 50px;
   -webkit-box-flex: 1;
