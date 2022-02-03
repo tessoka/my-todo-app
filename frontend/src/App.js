@@ -18,7 +18,7 @@ function App() {
 
   const [ sessionToken, setSessionToken ] = useState(localStorage.getItem("sessionToken"))
   const [ themeColor, setThemeColor ] = useState("")
-  const [ isNavOpen, setIsNavOpen ] = useState("")
+  const [ isNavOpen, setIsNavOpen ] = useState(JSON.parse(localStorage.getItem("isNavOpen")))
 
   const identifyUser = async () => {
     try {
@@ -32,11 +32,6 @@ function App() {
         localStorage.setItem("isNavOpen", true)
         localStorage.setItem("themeColor", "light")
       } else {
-        if (localStorage.getItem("isNavOpen") === "true") {
-          setIsNavOpen(true)
-        } else {
-          setIsNavOpen(false)
-        }
         setThemeColor(localStorage.getItem("themeColor"))
       }
     } catch (err) {
