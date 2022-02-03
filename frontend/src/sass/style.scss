@@ -2,6 +2,8 @@
 @import "./variables";
 @import "./sidebar";
 @import "./home";
+@import "./registration";
+@import "./intro";
 
 
 
@@ -13,17 +15,32 @@
   outline: none;
   text-decoration: none;
   font-family: inherit;
+  &::-moz-selection {
+    background: $secondaryColor-1;
+  }
+  &::selection {
+    background: $secondaryColor-1;
+  }
 }
 
 body {
   font-family: 'Montserrat', sans-serif;
 }
+  
 
 button,
 a {
   color: inherit;
   cursor: pointer;
 }
+
+ol,
+ul,
+li {
+  list-style: none;
+  display: block;
+}
+
 
 // ----- END of RESET CSS -----
 
@@ -42,10 +59,6 @@ main {
   height: 100vh;
   padding: 50px;
   flex: 1;
-  @include flexCenter();
-  justify-content: flex-start;
-
-  // z-index: -1;
 }
 // ----- END of FUNDAMENTALS -----
 
@@ -63,10 +76,12 @@ main {
   font-size: 12px;
   text-transform: uppercase;
   color: $primaryColor-5;
+  transition: transform .5s ease;
 
   &:hover {
     border: none;
     background-color: $secondaryColor-1;
+    transform: scale(1.05);
   }
 
 }

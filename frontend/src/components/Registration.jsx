@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import { Link } from 'react-router-dom'
 import axios from 'axios'
 import { backendUrl } from "../utility/ServerUrl"
 
@@ -45,14 +46,21 @@ const Registration = () => {
 
   return (
     <div className="container container-registration">
-      <h2>Registration</h2>
+      <div className="register-text-box">
+        <h1>Registration</h1>
+        <p>Please provide username and email address for successful registration...</p>
+      </div>
+      <div className="the-box-small"></div>
 
       <form>
         <input type="text" placeholder="Username" value={username} onChange={(e) => setUsername(e.target.value)} />
         <input type="text" placeholder="Email" value={useremail} onChange={(e) => setUseremail(e.target.value)} />
         <input className={regStatus.msg === "Wrong passwords" ? "input-err" : ""} type="password" placeholder="Password" value={userpassword} onChange={(e) => setUserpassword(e.target.value)} />
         <input className={regStatus.msg === "Wrong passwords" ? "input-err" : ""} type="password" placeholder="Password again" value={userpassword2} onChange={(e) => setUserpassword2(e.target.value)} />
-        <button className="btn btn-cta"onClick={handleClickReg} >{regStatus.status ? regStatus.msg : "Sign up!"}</button>
+        <div className="reg-btn-box">
+          <button className="btn btn-cta" onClick={handleClickReg} >{regStatus.status ? regStatus.msg : "Sign up!"}</button>
+          <Link to="/"><button className="btn">Back</button></Link>
+        </div>
       </form>
 
     </div>

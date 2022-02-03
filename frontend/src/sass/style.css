@@ -340,8 +340,6 @@ nav span {
 }
 
 .container-home .logo-container p {
-  letter-spacing: 1px;
-  color: #192136;
   line-height: 38px;
   font-size: 32px;
   font-weight: 900;
@@ -421,6 +419,161 @@ nav span {
           justify-content: space-between;
 }
 
+.container-registration {
+  width: 500px;
+  height: 100%;
+  color: #192136;
+  letter-spacing: 1px;
+}
+
+.container-registration .register-text-box h1 {
+  margin-bottom: 5px;
+}
+
+.container-registration .the-box-small {
+  background-color: #192136;
+  width: 50px;
+  height: 20px;
+  margin: 25px 0;
+}
+
+.container-registration form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.container-registration form input {
+  background-color: #fbfbfd;
+  border: none;
+  -webkit-box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+  width: 350px;
+  height: 40px;
+  padding-left: 15px;
+  letter-spacing: 1px;
+}
+
+.container-registration form input:not(:last-of-type) {
+  margin-bottom: 10px;
+}
+
+.container-registration form .input-err {
+  background-color: #f41361;
+}
+
+.container-registration form .reg-btn-box {
+  margin-top: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 15px;
+}
+
+.modal-bg {
+  background-color: rgba(0, 0, 0, 0.75);
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 10;
+  opacity: 0;
+  pointer-events: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  letter-spacing: 1px;
+  -webkit-transition: opacity 1s ease;
+  transition: opacity 1s ease;
+}
+
+.modal-bg .modal-box {
+  background-color: #fbfbfd;
+  position: relative;
+  width: 500px;
+  height: 600px;
+  padding: 25px;
+}
+
+.modal-bg .modal-box h4 {
+  margin-top: 15px;
+}
+
+.modal-bg .modal-box p {
+  margin-top: 15px;
+}
+
+.modal-bg .modal-box button {
+  position: absolute;
+  bottom: 25px;
+  right: 25px;
+}
+
+.show {
+  opacity: 1;
+  pointer-events: auto;
+  -webkit-animation: fade 1s linear;
+  animation: fade 1s linear;
+}
+
+@-webkit-keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.icon-close-bg {
+  background-color: #f41361;
+  border-radius: 50%;
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  height: 30px;
+  width: 30px;
+  fill: #192136;
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+  cursor: pointer;
+}
+
+.icon-close-bg svg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  height: 25px;
+  width: 25px;
+}
+
+.icon-close-bg:hover {
+  -webkit-transform: rotate(90deg) scale(1.1);
+          transform: rotate(90deg) scale(1.1);
+}
+
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -431,6 +584,14 @@ nav span {
   font-family: inherit;
 }
 
+*::-moz-selection {
+  background: #f41361;
+}
+
+*::selection {
+  background: #f41361;
+}
+
 body {
   font-family: 'Montserrat', sans-serif;
 }
@@ -439,6 +600,13 @@ button,
 a {
   color: inherit;
   cursor: pointer;
+}
+
+ol,
+ul,
+li {
+  list-style: none;
+  display: block;
 }
 
 .App {
@@ -461,18 +629,6 @@ main {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
 }
 
 .btn {
@@ -484,11 +640,17 @@ main {
   font-size: 12px;
   text-transform: uppercase;
   color: #192136;
+  -webkit-transition: -webkit-transform .5s ease;
+  transition: -webkit-transform .5s ease;
+  transition: transform .5s ease;
+  transition: transform .5s ease, -webkit-transform .5s ease;
 }
 
 .btn:hover {
   border: none;
   background-color: #f41361;
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
 }
 
 .btn-cta {

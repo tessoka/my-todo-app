@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Navbar from './components/Navbar'
 import Home from './components/Home'
+import Intro from './components/Intro'
 import Dashboard from './components/Dashboard'
 import Registration from './components/Registration'
 import Profile from './components/Profile'
@@ -45,6 +46,9 @@ function App() {
   return (
     <ThemeContext.Provider value={{ themeColor, setThemeColor }}>
       <Router>
+        
+        <Intro />
+
         <div className={themeColor === "dark" ? "App dark" : "App"}>
           <aside>
             <Navbar showNav={showNav} />
