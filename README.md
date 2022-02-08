@@ -31,4 +31,4 @@ This is my most recent full-stack project which is written in React.js, Node.js 
 
 
 ## Preview
-Url: https://tessoka.github.io/my-todo-app/
+https://tessoka.github.io/my-todo-app/
