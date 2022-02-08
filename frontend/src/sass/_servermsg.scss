@@ -1,0 +1,37 @@
+.contaner-servermsg {
+  // border-radius: $nav-border-radius;
+  // border: 1px solid red;
+  
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+
+  width: 350px;
+
+  margin: 50px 0;
+
+  transition: opacity .75s ease;
+  opacity: 1;
+  pointer-events: none;
+
+  &.hide {
+    opacity: 0;
+  }
+
+}
+
+.servermsg-box {
+  // border: 1px solid blue;
+  text-align: center;
+  border-radius: $nav-border-radius;
+  padding: 15px;
+  
+  &.status-ok {
+    background-color: $okColor-1;
+  }
+  
+  &.status-no {
+    background-color: $noColor-1
+  }
+}

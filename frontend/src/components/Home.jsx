@@ -1,7 +1,8 @@
-import React, { useState } from 'react'
+import React, { useState, useContext } from 'react'
 import { Link } from 'react-router-dom'
 import { backendUrl } from "../utility/ServerUrl"
 import axios from 'axios'
+import { ServerMsgContext } from '../utility/Context'
 
 
 const Home = () => {
@@ -9,6 +10,7 @@ const Home = () => {
   const [ useremail, setUseremail ] = useState("")
   const [ userpassword, setUserpassword ] = useState("")
   const [ isLoggedIn, setIsLoggedIn ] = useState(false)
+  const { serverMsg, setServerMsg } = useContext(ServerMsgContext)
 
   const login = async () => {
     try {
@@ -18,10 +20,13 @@ const Home = () => {
 
 // **************** LETS STORE USER DATA IN REDUX ****************
 
+        localStorage.setItem("token", res.data.token)
+        setServerMsg({isVisible: true, isError: false, msg: res.data.msg})
         setIsLoggedIn(true)
       }
       
     } catch (err) {
+      setServerMsg({isVisible: true, isError: true, msg: err.response.data.msg})
       console.log(err.response.data.msg)
     }
   }

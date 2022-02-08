@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Navbar from './components/Navbar'
 import Home from './components/Home'
 import Intro from './components/Intro'
+import ServerMessage from './components/ServerMessage'
 import Dashboard from './components/Dashboard'
 import Registration from './components/Registration'
 import Profile from './components/Profile'
@@ -11,7 +12,7 @@ import Analytics from './components/Analytics'
 import Settings from './components/Settings'
 import axios from 'axios'
 import { backendUrl } from './utility/ServerUrl'
-import { ThemeContext } from './utility/Context'
+import { ThemeContext, ServerMsgContext } from './utility/Context'
 
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
   const [ sessionToken, setSessionToken ] = useState(localStorage.getItem("sessionToken"))
   const [ themeColor, setThemeColor ] = useState("")
   const [ isNavOpen, setIsNavOpen ] = useState(JSON.parse(localStorage.getItem("isNavOpen")))
+  const [ serverMsg, setServerMsg ] = useState({isVisible: false, isError: false, msg: ""})
 
   const identifyUser = async () => {
     try {
@@ -46,6 +48,7 @@ function App() {
   }, [])
 
   return (
+    <ServerMsgContext.Provider value={{ serverMsg, setServerMsg }}>
     <ThemeContext.Provider value={{ themeColor, setThemeColor }}>
       <Router>
         
@@ -67,8 +70,12 @@ function App() {
             </Routes>
           </main>
         </div>
+
+        <ServerMessage />
+
       </Router>
     </ThemeContext.Provider>
+    </ServerMsgContext.Provider>
   );
 }
 

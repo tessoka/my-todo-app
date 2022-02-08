@@ -574,6 +574,38 @@ nav span {
           transform: rotate(90deg) scale(1.1);
 }
 
+.contaner-servermsg {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 350px;
+  margin: 50px 0;
+  -webkit-transition: opacity .75s ease;
+  transition: opacity .75s ease;
+  opacity: 1;
+  pointer-events: none;
+}
+
+.contaner-servermsg.hide {
+  opacity: 0;
+}
+
+.servermsg-box {
+  text-align: center;
+  border-radius: 10px;
+  padding: 15px;
+}
+
+.servermsg-box.status-ok {
+  background-color: #9dd6b5;
+}
+
+.servermsg-box.status-no {
+  background-color: #e78787;
+}
+
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
