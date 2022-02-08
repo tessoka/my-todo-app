@@ -13,14 +13,14 @@ This is my most recent full-stack project which is written in React.js, Node.js 
 - Backend: Node.js
 - Database: MongoDB
 
-Frontend features:
+### Frontend features:
 - Pixel precision
 - State handling
 - State storing with Context
 - SASS utilization
 - Custom spinner
 
-Backend features:
+### Backend features:
 - Registration & Login with Joi validation
 - JSON Web Token authenticaiton
 - Session handling
